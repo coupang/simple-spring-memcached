@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.sonatype.oss</groupId>
-		<artifactId>oss-parent</artifactId>
-		<version>9</version>
-	</parent>
 	<groupId>com.google.code.simple-spring-memcached</groupId>
 	<artifactId>simple-spring-memcached-parent</artifactId>
 	<packaging>pom</packaging>
-	<version>3.5.1-SNAPSHOT</version>
+	<version>3.5.1.COUPANG</version>
 	<name>simple-spring-memcached-parent</name>
 	<description>Simple spring memcached - parent</description>
 	<url>http://github.com/ragnor/simple-spring-memcached</url>
@@ -203,6 +198,17 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>devel.coupang.releases</id>
+			<url>${coupang.deploy.url}/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>devel.coupang.snapshot</id>
+			<url>${coupang.deploy.url}/snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
